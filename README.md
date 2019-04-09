@@ -2,7 +2,7 @@
 ##Discente: Lindoarte Alves Moreira
 1  Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?
                
-    A aprendizagem de ponteiros na computação nos fornece técnicas importantes para manipulação de dados. Por  vezes                 precisamos operar a nível de hardware para obtenção de desempenho e soluções de porblemas numéricos. Lidar com ponteiros         numa linguagem adequado como C, por exemplo, possibilita adentrar de forma eficiente no pensamento engenhoso de criação e       optimização computacional. Além disso, nos propõe obter conhecimento sobre o funcionamento da máquina de cálculos,               conhecimento fundamental para programar em qualquer outra linguagem.
+    A aprendizagem de ponteiros na computação nos fornece técnicas importantes para manipulação de dados. Por vezes precisamos operar a nível de hardware para obtenção de desempenho e soluções de porblemas numéricos. Lidar com ponteiros numa linguagem adequado como C, por exemplo, possibilita adentrar de forma eficiente no pensamento engenhoso de criação e optimização computacional. Além disso, nos propõe obter conhecimento sobre o funcionamento da máquina de cálculos, conhecimento fundamental para programar em qualquer outra linguagem.
    
 2 Seja o seguinte trecho de programa:
    int i=3,j=5;
@@ -11,23 +11,17 @@
    q = &j;
 Determine o valor das seguintes expressões:
 
-     p == &i;
-    /*O valor de p é o endereço que guarda o valor de i (3). Fazendo uma 
-    variável booleana receber essa proposição e exibindo-a, 
-    essa irá retornar verdadeiro (1). */
+    p == &i;
+    O valor de p é o endereço que guarda o valor de i (3). Fazendo uma variável booleana receber essa proposição e exibindo-a, essa irá retornar verdadeiro (1). */
  
-     *p - *q;
-    /*O resultado é a soma 3-5 = -2. Visto que p e q são ponteiros, e *p 
-    e *q são suas desreferenciações.*/
+    *p - *q;
+    O resultado é a soma 3-5 = -2. Visto que p e q são ponteiros, e *p e *q são suas desreferenciações.*/
 
      **&p;
-    Aqui é possível imaginar que '*&' se anulam, restando *p, que é o 
-    valor contido na variável i (3)*/
+    Aqui é possível imaginar que '*&' se anulam, restando *p, que é o valor contido na variável i (3)*/
 
      *p/(*q) + 7;
-     /*Nesta operação, como as variáveis, dadas referenciações *p e *q, 
-     são de tipo inteiro, a divisão '*p/(*q)' é zero porque o numerador é 
-     menor que o denominador*/
+     Nesta operação, como as variáveis, dadas referenciações *p e *q, são de tipo inteiro, a divisão '*p/(*q)' é zero porque o numerador é menor que o denominador*/
 
 3 Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória
 
@@ -169,7 +163,7 @@ Determine o valor das seguintes expressões:
     pulo + 4; // referencia o valor da quinta posição
     pulo + 2; // referencia o valor do terceiro elemento do vetor
     
-    Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique.
+8 Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique.
     
     p = mat + 1; // válida: vetor mat recebe um incremento de posição
     p = mat++; //inválida:  errado ...vetor mat recebe um incremento de posição
@@ -177,7 +171,7 @@ Determine o valor das seguintes expressões:
     x = (*mat)++; //válida: errdo... o array mat está sendo tratado e desreferenciado como ponteiro
     
     
-8 O que fazem os seguintes programas em C?
+9 O que fazem os seguintes programas em C?
 
     int main(){
       int vet[] = {4,9,13};
@@ -196,7 +190,7 @@ Determine o valor das seguintes expressões:
     
     //rascunho: o primeiro apresenta os valores de vet. o segundo, os endereçoes desses valores
     
-9 Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]). Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os valores de x+1, x+2 e x+3 se:
+10 Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]). Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os valores de x+1, x+2 e x+3 se:
 
     x for declarado como char?
     // x+1 = 4093, x+2 = 4094 e x+3 = 4095
@@ -211,10 +205,11 @@ Determine o valor das seguintes expressões:
     // x+1 = 4100, x+2 = 4108 e x+3 = 4116
 
 11 Implemente um programa de computador para testar estas suposições e compare as respostas oferecidas pelo programa com as respostas que você idealizou.
+    
     #include <stdio.h>
 
-int main ()
-{
+    int main ()
+    {
     //redefinindo tamnhos dos tipos de dados para nova máquina
     int tam_char = sizeof(char); //continua com mesmo tamanho
     int tam_int = sizeof(int) - 2;
@@ -248,7 +243,7 @@ int main ()
             printf("x + %d  = %d  \n", i, tam_x + tam_double*i);
             }
     return 0;
-}
+    }
 
 12 Suponha que as seguintes declarações tenham sido realizadas:
     
@@ -267,18 +262,18 @@ int main ()
 
 13 O que é um ponteiro para uma função? Pesquise na Internet referências sobre o assunto e escreva um pequeno programa exemplificando o uso deste recurso.
 
-Como uma função é um conjunto de instuções armazeanadas na memória da máquina, através de um ponteiro é possível acessar uma função.
+    Como uma função é um conjunto de instuções armazeanadas na memória da máquina, através de um ponteiro é possível acessar uma função.
 
-#include <stdio.h>
+    #include <stdio.h>
 
-//função
-int soma(int a, int b)
-{
+    //função
+    int soma(int a, int b)
+    {
     return a + b;
-}
+    }
 
-int main()
-{   int x, y, z;
+    int main()
+    {   int x, y, z;
     int (*p)(int, int);
 
     printf("Digite dois números para a soma: ");
@@ -290,16 +285,16 @@ int main()
 
     system("pause");
     return 0;
-}
+    }
 
 
 14 Implemente em linguagem C uma função em um programa de computador que leia n valores do tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para realizar a tarefa.
 
-#include <stdio.h>
-#include <stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h> //uso do malloc
 
-int main()
-{
+    int main()
+    {
     float *v, aux;
     int n;
 
@@ -343,8 +338,8 @@ int main()
     free(v);// Importante
     }
     else
-        printf("\nVoce digitou um numero invalido!\n\n");
-}
+    printf("\nVoce digitou um numero invalido!\n\n");
+    }
 
 
 15 Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu código, explicando o que faz cada uma das linhas.
