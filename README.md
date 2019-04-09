@@ -4,34 +4,33 @@ Discente: Lindoarte Alves Moreira
 /..--------------Lista de Exercícios (Ponteiros)----------------../
 
 /1  Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?
-
-     A linguagem C opera muito próxima ao hardware. Se, por um lado, isto gera uma dificuldade extra para seu aprendizado, por        outro, programando em C, temos um bom conhecimento de como o computador funciona, e este conhecimento é fundamental para        programar bem em qualquer linguagem. Em C, somos obrigados a gerenciar explicitamente a memória que alocamos, podemos            manipular diretamente endereços de memória, precisamos entender o conceito de passagem de parâmetro por valor e por              referência, aprendemos o conceito de variáveis do tipo ponteiro etc. Adquirimos um conhecimento que nos permite escrever        programas corretos e eficientes
+               
+     Os a aprendizagem de ponteiros na computação nos fornece técnicas importantes para manipulação de dados. Por  vezes              precisamos operar a nível de hardware para obtenção de desempenho e soluções de porblemas numéricos. Lidar com ponteiros        numa linguagem adequado como C, por exemplo, possibilita adentrar de forma eficiente no pensamento engenhoso de criação e        optimização computacional. Além disso, nos propõe obter conhecimento sobre o funcionamento da máquina de cálculos,              conhecimento fundamental para programar em qualquer outra linguagem.
+   
 /2 Seja o seguinte trecho de programa:
-
-    int i=3,j=5;
-    int *p, *q;
-    p = &i;
-    q = &j;
-
+   int i=3,j=5;
+   int *p, *q;
+   p = &i;
+   q = &j;
 Determine o valor das seguintes expressões:
 
-    p == &i;
+     p == &i;
     /*O valor de p é o endereço que guarda o valor de i (3). Fazendo uma 
     variável booleana receber essa proposição e exibindo-a, 
     essa irá retornar verdadeiro (1). */
  
-    *p - *q;
+     *p - *q;
     /*O resultado é a soma 3-5 = -2. Visto que p e q são ponteiros, e *p 
     e *q são suas desreferenciações.*/
 
-    **&p;
-    /*Aqui é possível imaginar que '*&' se anulam, restando *p, que é o 
+     **&p;
+    Aqui é possível imaginar que '*&' se anulam, restando *p, que é o 
     valor contido na variável i (3)*/
 
-3 - *p/(*q) + 7;
-/*Nesta operação, como as variáveis, dadas referenciações *p e *q, 
-são de tipo inteiro, a divisão '*p/(*q)' é zero porque o numerador é 
-menor que o denominador*/
+     *p/(*q) + 7;
+     /*Nesta operação, como as variáveis, dadas referenciações *p e *q, 
+     são de tipo inteiro, a divisão '*p/(*q)' é zero porque o numerador é 
+     menor que o denominador*/
 
 / 3 Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória
 
@@ -45,15 +44,14 @@ menor que o denominador*/
 
 / 4 Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?
 
-    p = i;              //ilegal
-    q = &j;             //legal
-    p = &*&i;           //legal
-    i = (*&)j;          //ilegal, porque a ordem de precedência começa nos operadores * e & não identificam o tratamento prioritário de ponteiros.
-    i = *&j;            //legal. A precedência aqui é feita naturalmente como i = *(&j) depois, seja p = &j, i = (*p), assim i = j.
-    i = *&*&j;          //legal. Uma variável (não ponteiro) inteira recebe adequadamente um valor de variável: i = *&*(&j) (seja int *p cujo p = &j), i = *&(*p),
-                        //i = *(&j), i = *p.
-    q = *p;             //ilegal. O ponteiro tende a aceitar localizações de valroes atribuídas às variáveis.
-    i = (*p)++ + *q;    //
+    p = i;            //ilegal
+    q = &j;           //legal
+    p = &*&i;         //legal
+    i = (*&)j;        //ilegal, porque a ordem de precedência começa nos operadores * e & não identificam o tratamento prioritário de ponteiros.
+    i = *&j;         //legal. A precedência aqui é feita naturalmente como i = *(&j) depois, seja p = &j, i = (*p), assim i = j.
+    i = *&*&j;        //legal. Uma variável (não ponteiro) inteira recebe adequadamente um valor de variável: i = *&*(&j) (seja int *p cujo p = &j), i = *&(*p),//i = *(&j), i = *p.
+    q = *p;           //ilegal. O ponteiro tende a aceitar localizações de valroes atribuídas às variáveis.
+    i = (*p)++ + *q;  //
 
 / 5 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
 
