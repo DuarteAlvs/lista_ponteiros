@@ -1,13 +1,10 @@
-# lista_ponteiros
-Discente: Lindoarte Alves Moreira
-
 /..--------------Lista de Exercícios (Ponteiros)----------------../
-
-/1  Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?
+##Discente: Lindoarte Alves Moreira
+1  Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?
                
-     Os a aprendizagem de ponteiros na computação nos fornece técnicas importantes para manipulação de dados. Por  vezes              precisamos operar a nível de hardware para obtenção de desempenho e soluções de porblemas numéricos. Lidar com ponteiros        numa linguagem adequado como C, por exemplo, possibilita adentrar de forma eficiente no pensamento engenhoso de criação e        optimização computacional. Além disso, nos propõe obter conhecimento sobre o funcionamento da máquina de cálculos,              conhecimento fundamental para programar em qualquer outra linguagem.
+    A aprendizagem de ponteiros na computação nos fornece técnicas importantes para manipulação de dados. Por  vezes                 precisamos operar a nível de hardware para obtenção de desempenho e soluções de porblemas numéricos. Lidar com ponteiros         numa linguagem adequado como C, por exemplo, possibilita adentrar de forma eficiente no pensamento engenhoso de criação e       optimização computacional. Além disso, nos propõe obter conhecimento sobre o funcionamento da máquina de cálculos,               conhecimento fundamental para programar em qualquer outra linguagem.
    
-/2 Seja o seguinte trecho de programa:
+2 Seja o seguinte trecho de programa:
    int i=3,j=5;
    int *p, *q;
    p = &i;
@@ -32,7 +29,7 @@ Determine o valor das seguintes expressões:
      são de tipo inteiro, a divisão '*p/(*q)' é zero porque o numerador é 
      menor que o denominador*/
 
-/ 3 Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória
+3 Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória
 
     int i=5, *p;
     p = &i;
@@ -42,7 +39,7 @@ Determine o valor das seguintes expressões:
     //4094 7 5 15 9
          
 
-/ 4 Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?
+4 Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?
 
     p = i;            //ilegal
     q = &j;           //legal
@@ -53,7 +50,7 @@ Determine o valor das seguintes expressões:
     q = *p;           //ilegal. O ponteiro tende a aceitar localizações de valroes atribuídas às variáveis.
     i = (*p)++ + *q;  //
 
-/ 5 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
+5 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
 
     int main() {
       int    valor;
@@ -137,7 +134,7 @@ Determine o valor das seguintes expressões:
       return(0);
     }
     
-Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
+6 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
 
     int main(void){
       float vet[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
@@ -165,7 +162,7 @@ Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e ve
     // Basicamente ensina algumas propriedades dos ponteiros. São noções primordiais sobre o armazenamento de variáveis e o acesso aos endereços
     
     
-Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o valor do terceiro elemento do vetor?
+7 Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o valor do terceiro elemento do vetor?
 
     *(pulo + 2); // rasc:...representa o terceiro valor, mas n o referencia
     *(pulo + 4); //representa o quinto valor, mas n o referencia
@@ -180,7 +177,7 @@ Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões re
     x = (*mat)++; //válida: errdo... o array mat está sendo tratado e desreferenciado como ponteiro
     
     
-O que fazem os seguintes programas em C?
+8 O que fazem os seguintes programas em C?
 
     int main(){
       int vet[] = {4,9,13};
@@ -199,7 +196,7 @@ O que fazem os seguintes programas em C?
     
     //rascunho: o primeiro apresenta os valores de vet. o segundo, os endereçoes desses valores
     
-Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]). Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os valores de x+1, x+2 e x+3 se:
+9 Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]). Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os valores de x+1, x+2 e x+3 se:
 
     x for declarado como char?
     // x+1 = 4093, x+2 = 4094 e x+3 = 4095
