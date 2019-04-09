@@ -1,11 +1,11 @@
 /..--------------Lista de Exercícios (Ponteiros)----------------../
 ##Discente: Lindoarte Alves Moreira
 
-**1 Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?
+**1 Qual a utilidade do aprendizado do uso de ponteiro para aplicações em engenharia?**
                
     A aprendizagem de ponteiros na computação nos fornece técnicas importantes para manipulação de dados. Por vezes precisamos operar a nível de hardware para obtenção de desempenho e soluções de porblemas numéricos. Lidar com ponteiros numa linguagem adequado como C, por exemplo, possibilita adentrar de forma eficiente no pensamento engenhoso de criação e optimização computacional. Além disso, nos propõe obter conhecimento sobre o funcionamento da máquina de cálculos, conhecimento fundamental para programar em qualquer outra linguagem.
    
-**2 Seja o seguinte trecho de programa:
+**2 Seja o seguinte trecho de programa:**
    int i=3,j=5;
    int *p, *q;
    p = &i;
@@ -24,17 +24,16 @@ Determine o valor das seguintes expressões:
      *p/(*q) + 7;
      Nesta operação, como as variáveis, dadas referenciações *p e *q, são de tipo inteiro, a divisão '*p/(*q)' é zero porque o numerador é menor que o denominador*/
 
-**3 Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória
+**3 Mostre o que será impresso por programa supondo que i ocupa o endereço 4094 na memória**
 
-    int i=5, *p;
-    p = &i;
-    printf("%x %d %d %d %d", p, *p+2,**&p,3**p,**&p+4);
-    }
-    //72fe4c 7 5 15 9
-    //4094 7 5 15 9
-         
+    'int i=5, *p;
+     p = &i;
+     printf("%x %d %d %d %d", p, *p+2,**&p,3**p,**&p+4);
+     }
+     //4094 7 5 15 9
+     '    
 
-**4 Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?
+**4 Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de atribuição são ilegais?**
 
     p = i;            //ilegal
     q = &j;           //legal
@@ -45,9 +44,9 @@ Determine o valor das seguintes expressões:
     q = *p;           //ilegal. O ponteiro tende a aceitar localizações de valroes atribuídas às variáveis.
     i = (*p)++ + *q;  //
 
-**5 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
+**5 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).**
 
-      int main() {
+     'int main() {
       int    valor;
       int   *p1;
       float  temp;
@@ -127,9 +126,9 @@ Determine o valor das seguintes expressões:
       p5++; // é incrementado uma posição a mais na posição inicial de p5
       printf("%d \n", *p5); //  Imprime 27
       return(0);
-    }
-    
-**6 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).
+    }'
+ 
+**6 Determine o que será mostrado pelo seguinte programa (compile-o, execute-o e verifique se foram obtidas as respostas esperadas).**
 
     int main(void){
       float vet[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
@@ -157,14 +156,14 @@ Determine o valor das seguintes expressões:
     // Basicamente ensina algumas propriedades dos ponteiros. São noções primordiais sobre o armazenamento de variáveis e o acesso aos endereços
     
     
-**7 Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o valor do terceiro elemento do vetor?
+**7 Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o valor do terceiro elemento do vetor?**
 
     *(pulo + 2); // rasc:...representa o terceiro valor, mas n o referencia
     *(pulo + 4); //representa o quinto valor, mas n o referencia
     pulo + 4; // referencia o valor da quinta posição
     pulo + 2; // referencia o valor do terceiro elemento do vetor
     
-**8 Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique.
+**8 Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique.**
     
     p = mat + 1; // válida: vetor mat recebe um incremento de posição
     p = mat++; //inválida:  errado ...vetor mat recebe um incremento de posição
@@ -172,7 +171,7 @@ Determine o valor das seguintes expressões:
     x = (*mat)++; //válida: errdo... o array mat está sendo tratado e desreferenciado como ponteiro
     
     
-**9 O que fazem os seguintes programas em C?
+**9 O que fazem os seguintes programas em C?**
 
     int main(){
       int vet[] = {4,9,13};
@@ -191,7 +190,7 @@ Determine o valor das seguintes expressões:
     
     //rascunho: o primeiro apresenta os valores de vet. o segundo, os endereçoes desses valores
     
-**10 Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]). Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os valores de x+1, x+2 e x+3 se:
+**10 Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]). Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os valores de x+1, x+2 e x+3 se:**
 
     x for declarado como char?
     // x+1 = 4093, x+2 = 4094 e x+3 = 4095
@@ -205,7 +204,7 @@ Determine o valor das seguintes expressões:
     x for declarado como double?
     // x+1 = 4100, x+2 = 4108 e x+3 = 4116
 
-**11 Implemente um programa de computador para testar estas suposições e compare as respostas oferecidas pelo programa com as respostas que você idealizou.
+**11 Implemente um programa de computador para testar estas suposições e compare as respostas oferecidas pelo programa com as respostas que você idealizou.**
     
     #include <stdio.h>
 
@@ -246,7 +245,7 @@ Determine o valor das seguintes expressões:
     return 0;
     }
 
-**12 Suponha que as seguintes declarações tenham sido realizadas:
+**12 Suponha que as seguintes declarações tenham sido realizadas:**
     
     float aloha[10], coisas[10][5], *pf, value = 2.2;
     int i=3;
@@ -261,7 +260,7 @@ Determine o valor das seguintes expressões:
     pf = value; //inválido porque pf é um endereço e espera um ponteiro
     pf = aloha; //válido porque um ponteiro está recebendo um array
 
-**13 O que é um ponteiro para uma função? Pesquise na Internet referências sobre o assunto e escreva um pequeno programa exemplificando o uso deste recurso.
+**13 O que é um ponteiro para uma função? Pesquise na Internet referências sobre o assunto e escreva um pequeno programa exemplificando o uso deste recurso.**
 
     Como uma função é um conjunto de instuções armazeanadas na memória da máquina, através de um ponteiro é possível acessar uma função.
 
@@ -289,7 +288,7 @@ Determine o valor das seguintes expressões:
     }
 
 
-**14 Implemente em linguagem C uma função em um programa de computador que leia n valores do tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para realizar a tarefa.
+**14 Implemente em linguagem C uma função em um programa de computador que leia n valores do tipo float e os apresente em ordem crescente. Utilize alocação dinâmica de memória para realizar a tarefa.**
 
     #include <stdio.h>
     #include <stdlib.h> //uso do malloc
@@ -343,16 +342,16 @@ Determine o valor das seguintes expressões:
     }
 
 
-**15 Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu código, explicando o que faz cada uma das linhas.
+**15 Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seu código, explicando o que faz cada uma das linhas.**
 
-**16 Utilize a ideia do ponteiro para função pela função qsort() para implementar sua própria função de ordenação. Para isso, sua função deverá receber, entre outros argumentos, um ponteiro para a função de comparação.
+**16 Utilize a ideia do ponteiro para função pela função qsort() para implementar sua própria função de ordenação. Para isso, sua função deverá receber, entre outros argumentos, um ponteiro para a função de comparação.**
 
-**17 Procure na internet mecanismos que possibilitem medir tempos de execução de rotinas computacionais. Geralmente, estas medidas são realizadas com o auxílio de funções em C que lêem a hora no sistema (sistemas Unix e Windows geralmente usam funções diferentes). Utilizando os conhecimentos que você obteve com sua pesquisa, meça os tempos de execução das implementações que você criou para os dois problemas de ordenação anteriores e compare os resultados obtidos.
+**17 Procure na internet mecanismos que possibilitem medir tempos de execução de rotinas computacionais. Geralmente, estas medidas são realizadas com o auxílio de funções em C que lêem a hora no sistema (sistemas Unix e Windows geralmente usam funções diferentes). Utilizando os conhecimentos que você obteve com sua pesquisa, meça os tempos de execução das implementações que você criou para os dois problemas de ordenação anteriores e compare os resultados obtidos.**
 
-**18 Escreva uma função em c que escreva em um vetor a soma dos elementos correspondentes de outros dois vetores (os tamanhos dos vetores devem ser fornecidos pelo usuário). Por exemplo, se o primeiro vetor contiver os elementos 1, 3, 0 e -2, e o segundo vetor contiver os elementos 3, 5, -3 e 1, o vetor de soma terá valores resultantes iguais a 4, 8, -3 e -1. A função deve receber 4 argumentos: os nomes dos três vetores e o número de elementos presentes em cada vetor.
+**18 Escreva uma função em c que escreva em um vetor a soma dos elementos correspondentes de outros dois vetores (os tamanhos dos vetores devem ser fornecidos pelo usuário). Por exemplo, se o primeiro vetor contiver os elementos 1, 3, 0 e -2, e o segundo vetor contiver os elementos 3, 5, -3 e 1, o vetor de soma terá valores resultantes iguais a 4, 8, -3 e -1. A função deve receber 4 argumentos: os nomes dos três vetores e o número de elementos presentes em cada vetor.**
 
-**19 Crie uma função capaz de realizar multiplicação matricial da forma C=ABC=AB. A função deve receber 6 argumentos: os ponteiros para as matrizes A, B e C, o número de linhas e colunas de A e o número de colunas de B (assuma que o número de coluna de A é igual ao número de linhas de B). O resultado da multiplicação deve ficar armazenado em C. Crie um programa para testar sua implementação, capaz de utilizar a função de multiplicação e imprimir as três matrizes. A função criada para multiplicação não deve realizar nenhum tipo de saída de dados no terminal.
+**19 Crie uma função capaz de realizar multiplicação matricial da forma C=ABC=AB. A função deve receber 6 argumentos: os ponteiros para as matrizes A, B e C, o número de linhas e colunas de A e o número de colunas de B (assuma que o número de coluna de A é igual ao número de linhas de B). O resultado da multiplicação deve ficar armazenado em C. Crie um programa para testar sua implementação, capaz de utilizar a função de multiplicação e imprimir as três matrizes. A função criada para multiplicação não deve realizar nenhum tipo de saída de dados no terminal.**
 
-**20 Pesquise na Internet sobre o uso da biblioteca libGC, que implementa um coletor de lixo em C. O processo de instalação dessa biblioteca em sistemas Windows pode ser um pouco trabalhoso. Entretanto, em sistemas Unix, a instalação é bem simples, de sorte que se recomenda a resolução desta questão em uma máquina, por exemplo, com Linux instalado. Caso seja usuário Windows e não queira instalar sistemas alternativos em seu computador, use uma ferramenta de virtualização (ex: VirtualBox) para instalar e executar o Linux sem alterar a instalação original de seu computador. Prepare um pequeno programa-exemplo demonstrando como usar a biblioteca.
+**20 Pesquise na Internet sobre o uso da biblioteca libGC, que implementa um coletor de lixo em C. O processo de instalação dessa biblioteca em sistemas Windows pode ser um pouco trabalhoso. Entretanto, em sistemas Unix, a instalação é bem simples, de sorte que se recomenda a resolução desta questão em uma máquina, por exemplo, com Linux instalado. Caso seja usuário Windows e não queira instalar sistemas alternativos em seu computador, use uma ferramenta de virtualização (ex: VirtualBox) para instalar e executar o Linux sem alterar a instalação original de seu computador. Prepare um pequeno programa-exemplo demonstrando como usar a biblioteca.**
 
-**21 Com base no programa-exemplo da questão anterior, proponha uma aplicação que permita comparar o desempenho das funções tradicionais de alocação/liberação de memória da linguagem c (malloc/free) com as funções de gerenciamento de memória da biblioteca que você escolheu. A aplicação deverá ser capaz de ressaltar possíveis atrasos de tempo provenientes do coletor de lixo utilizado.
+**21 Com base no programa-exemplo da questão anterior, proponha uma aplicação que permita comparar o desempenho das funções tradicionais de alocação/liberação de memória da linguagem c (malloc/free) com as funções de gerenciamento de memória da biblioteca que você escolheu. A aplicação deverá ser capaz de ressaltar possíveis atrasos de tempo provenientes do coletor de lixo utilizado.**
